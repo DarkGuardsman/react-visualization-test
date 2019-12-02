@@ -3,16 +3,16 @@ import './App.css';
 import ReactVisPage from "./react-vis/ReactVisPage";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>React-Vis Module</h1>
-      <p>Documentation: <a href={'https://uber.github.io/react-vis/'}>link</a></p>
-      <ReactVisPage/>
-      <br/>
-      <hr/>
-      <p>TODO add more examples</p>
-    </div>
-  );
+    return (
+        <div id={'App'}>
+            <div>
+                <h1>React Visualization Test</h1>
+                <p>This is a test application to toy with and demo visualization systems in react</p>
+            </div>
+            <ReactVisPage/>
+            <p>TODO add more examples</p>
+        </div>
+    );
 }
 
 export default App;
