@@ -42,6 +42,7 @@ export default class RVBubblePlot extends React.Component {
                     <VerticalGridLines/>
                     <HorizontalGridLines/>
                     <MarkSeries
+                        colorType="literal"
                         data={data}
                     />
                 </XYPlot>

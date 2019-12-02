@@ -41,9 +41,7 @@ export default class RVScatterPlot extends React.Component {
                     <HorizontalGridLines/>
                     <MarkSeries
                         data={data}
-                        stroke="white"
-                        opacityType="category"
-                        opacity="1"
+                        colorType="literal"
                     />
                 </XYPlot>
             </ExamplePlot>
