@@ -24,17 +24,3 @@ h1 {
 
 .examples {
 }
-
-.example {
-    margin: 5px;
-    width: 810px;
-}
-
-.example-title {
-    text-align: center;
-}
-
-.example-plot {
-    padding: 5px;
-    width: 800px;
-}

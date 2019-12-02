@@ -1,6 +1,7 @@
 import React from 'react';
 import RVScatterPlot from "./RVScatterPlot";
 import ExampleSection from "../prefabs/ExampleSection";
+import RVBubblePlot from "./RVBubblePlot";
 
 /** All example plots for React-Vis */
 export default class ReactVisPage extends React.Component {
@@ -12,6 +13,7 @@ export default class ReactVisPage extends React.Component {
                 sectionDocs={'https://uber.github.io/react-vis/'}
             >
                 <RVScatterPlot/>
+                <RVBubblePlot/>
             </ExampleSection>
         );
     }

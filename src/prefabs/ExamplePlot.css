@@ -1,0 +1,14 @@
+.example-plot {
+    display: inline-block;
+    margin: 5px;
+    width: 810px;
+}
+
+.example-plot-title {
+    text-align: center;
+}
+
+.example-plot-graph {
+    padding: 5px;
+    width: 800px;
+}
