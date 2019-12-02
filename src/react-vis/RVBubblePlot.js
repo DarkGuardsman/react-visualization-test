@@ -1,22 +1,35 @@
 import React from 'react';
 import {HorizontalGridLines, MarkSeries, VerticalGridLines, XAxis, XYPlot, YAxis} from "react-vis";
 import ExamplePlot from "../prefabs/ExamplePlot";
+import {generateDots} from "../helpers/generate_data";
 
-//Generate random data
-const data = new Array(30).fill(0).reduce((prev, curr) => [...prev, {
-    x: Math.random() * 20 - Math.random() * 20,
-    y: Math.random() * 20 - Math.random() * 20,
-    size: (Math.random() * 5) + 5
-}], []);
 
 /** Bubble plot example using a MarkSeries in React-Vis */
 export default class RVBubblePlot extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: generateDots(200, 20, true)
+        }
+
+        this.refreshData = this.refreshData.bind(this);
+    }
+
+    refreshData(colored) {
+        console.debug('Refreshing data');
+        this.setState({data: generateDots(200, 20, true)});
+    }
+
     render() {
+        const {data} = this.state;
         return (
             <ExamplePlot
                 exampleId={'react-vis-bubble-plot'}
                 exampleName={'Bubble Plot'}
                 exampleDocs={'https://uber.github.io/react-vis/documentation/series-reference/mark-series'}
+                refreshData={this.refreshData}
             >
                 <XYPlot
                     width={800}
@@ -30,9 +43,6 @@ export default class RVBubblePlot extends React.Component {
                     <HorizontalGridLines/>
                     <MarkSeries
                         data={data}
-                        stroke="white"
-                        opacityType="category"
-                        opacity="1"
                     />
                 </XYPlot>
             </ExamplePlot>
