@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ReactVisPage from "./react-vis/ReactVisPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React-Vis Module</h1>
+      <p>Documentation: <a href={'https://uber.github.io/react-vis/'}>link</a></p>
+      <ReactVisPage/>
+      <br/>
+      <hr/>
+      <p>TODO add more examples</p>
     </div>
   );
 }
